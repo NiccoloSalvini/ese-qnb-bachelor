@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>drills – Quantitative Business Methods</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-39c5bf676fe5f74c3e2352cc4d0198db.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-32b6a1ef7e9ba52d09e917c9077d60f5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="https://www.ese.ac.uk/locations/ese-florence" class="navbar-brand navbar-brand-logo">
+    <img src="../images/ese-logo.svg" alt="European School of Economics" class="navbar-logo light-content">
+    <img src="../images/ese-logo.svg" alt="European School of Economics" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="https://www.ese.ac.uk/locations/ese-florence">
+    <span class="navbar-title">Quantitative Business Methods <span class="nav-year">26/27</span></span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../setup.html"> 
+<span class="menu-text">How to work</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/NiccoloSalvini/ese-qnb-bachelor"> <i class="bi bi-github" role="img" aria-label="GitHub repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#week-5-drills" id="toc-week-5-drills" class="nav-link active" data-scroll-target="#week-5-drills">Week 5 — Drills</a>
+  <ul class="collapse">
+  <li><a href="#a.-pricing-a-bond" id="toc-a.-pricing-a-bond" class="nav-link" data-scroll-target="#a.-pricing-a-bond">A. Pricing a bond</a></li>
+  <li><a href="#b.-duration" id="toc-b.-duration" class="nav-link" data-scroll-target="#b.-duration">B. Duration</a></li>
+  <li><a href="#c.-convexity" id="toc-c.-convexity" class="nav-link" data-scroll-target="#c.-convexity">C. Convexity</a></li>
+  <li><a href="#d.-putting-it-together" id="toc-d.-putting-it-together" class="nav-link" data-scroll-target="#d.-putting-it-together">D. Putting it together</a></li>
+  <li><a href="#e.-immunisation-beyond-the-syllabus" id="toc-e.-immunisation-beyond-the-syllabus" class="nav-link" data-scroll-target="#e.-immunisation-beyond-the-syllabus">E. Immunisation — beyond the syllabus</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="week-5-drills" class="level1">
+<h1>Week 5 — Drills</h1>
+<p><em>Exam format. Show all work. Core items are for everyone; stretch items for whoever finishes early. Solutions at the end, worked the way an examiner wants to see them.</em></p>
+<p>Running case: <strong>Arno Bikes holds a small bond portfolio</strong> as a cash reserve, and is asked by the Board whether rising rates should worry it.</p>
+<p>Unless stated otherwise: annual coupons, face value €100, prices to the cent.</p>
+<section id="a.-pricing-a-bond" class="level2">
+<h2 class="anchored" data-anchor-id="a.-pricing-a-bond">A. Pricing a bond</h2>
+<p><strong>D1 (core).</strong> A 5-year bond, 4% annual coupon, face €100, yield 6%. (a) Write the price as a sum. (b) Compute it. (c) Is it at a premium or a discount, and why — in one sentence, without arithmetic?</p>
+<p><strong>D2 (core).</strong> The same bond at a yield of 4%. Then at 2%. (a) Both prices. (b) State the rule that connects coupon, yield and price.</p>
+<p><strong>D3 (core — resit form).</strong> <em>Select the correct alternative and justify in one line.</em> A bond trades <strong>above</strong> par. Therefore: (i) its coupon is above its yield (ii) its yield is above its coupon (iii) it must be close to maturity</p>
+<p><strong>D4 (core).</strong> A zero-coupon bond pays €100 in 8 years. The yield is 5%. (a) Its price today. (b) If the yield rises to 6%, the new price and the percentage change.</p>
+</section>
+<section id="b.-duration" class="level2">
+<h2 class="anchored" data-anchor-id="b.-duration">B. Duration</h2>
+<p><strong>D5 (core).</strong> For the 5-year 4% bond priced at a 6% yield (D1): (a) Compute Macaulay duration, showing the weight of each cash flow. (b) Convert it to modified duration. (c) Estimate the price change if the yield rises by 50 basis points.</p>
+<p><strong>D6 (core).</strong> A 10-year bond with a 5% coupon trades at par (yield 5%). Its modified duration is 7.72. (a) Estimate the new price if the yield rises to 6%. (b) The actual price at 6% is €92.64. Compare, and say which way the estimate errs.</p>
+<p><strong>D7 (stretch).</strong> Without computing anything, order these three by duration, longest first, and justify each comparison in one clause: (i) a 10-year zero-coupon bond (ii) a 10-year 8% coupon bond (iii) a 3-year 8% coupon bond</p>
+</section>
+<section id="c.-convexity" class="level2">
+<h2 class="anchored" data-anchor-id="c.-convexity">C. Convexity</h2>
+<p><strong>D8 (core).</strong> Using the bond in D6 (<code>P = 100</code>, <code>D_mod = 7.72</code>, convexity <code>C = 75.0</code>): (a) Estimate the price at a yield of 6% using duration <strong>and</strong> convexity. (b) Compare with the actual €92.64 and with the duration-only estimate from D6.</p>
+<p><strong>D9 (core — the Board sentence).</strong> In two sentences, no formulas: what does convexity buy the holder of a bond, and why does a risk manager care about it?</p>
+<p><strong>D10 (stretch).</strong> Two bonds have the same duration; one has higher convexity. Rates move sharply, direction unknown. Which would you rather hold, and why?</p>
+<p><em>The session closes with a <a href="../week-05/mock_exam.html">mock of the final exam’s calculus question</a>, thirty minutes in exam conditions.</em></p>
+</section>
+<section id="d.-putting-it-together" class="level2">
+<h2 class="anchored" data-anchor-id="d.-putting-it-together">D. Putting it together</h2>
+<p><strong>D11 (core).</strong> Arno Bikes holds €400,000 of the D6 bond (at par) and €600,000 of a 2-year bond with modified duration 1.90. (a) The portfolio’s modified duration. <em>(Weight each by market value.)</em> (b) The estimated loss in euros if yields rise by 1% across the board. (c) One sentence to the Board.</p>
+</section>
+<section id="e.-immunisation-beyond-the-syllabus" class="level2">
+<h2 class="anchored" data-anchor-id="e.-immunisation-beyond-the-syllabus">E. Immunisation — beyond the syllabus</h2>
+<p><em>The step after duration: using it to make a payment safe. A zero’s Macaulay duration is its maturity; yields are flat and move once, the day after purchase.</em></p>
+<p><strong>D12 (core).</strong> Arno Bikes must pay a supplier <strong>€500,000 in exactly 3 years</strong>. It can buy 1-year and 5-year zero-coupon bonds, both yielding 4%. (a) How much must it set aside today? (b) What share goes into each zero so that the portfolio’s duration is 3 years? (c) The euros in each, and the amount each zero pays at maturity.</p>
+<p><strong>D13 (core).</strong> The day after the purchase in D12, yields jump to <strong>5%</strong> and stay there. (a) The 1-year zero’s payment, reinvested at 5% until year 3: what is it worth then? (b) The 5-year zero, still two years from maturity at year 3: what is it worth then? (c) The total against the €500,000 owed. Then repeat (a)–(c) with yields falling to <strong>3%</strong> instead, and say what you notice.</p>
+<p><strong>D14 (stretch).</strong> Go back to the slide: €1M due in 4 years, flat yield 5%, money set aside today €822,702.47. Replace the 6-year zero with a <strong>6-year 5% coupon bond at par</strong>. (a) Its Macaulay duration, with the table of weights. (b) The share in the 2-year zero that makes the portfolio’s duration 4 years, and the euros in each. (c) One year later, yields unchanged: the payment is 3 years away, and the coupon bond is now a 5-year 5% bond at par, with Macaulay duration 4.55. By how much did each duration fall? What must the treasurer do, and how often?</p>
+<hr>
+<details>
+<summary>
+<strong>Solutions</strong>
+</summary>
+<p><strong>D1.</strong> (a) <code>P = Σ(t=1..5) 4/(1.06)^t + 100/(1.06)^5</code>. (b) Annuity part: <code>4 × [1 − (1.06)⁻⁵]/0.06 = 4 × 4.212364 = 16.85</code>. Face: <code>100/(1.06)⁵ = 74.73</code>. <code>P = **€91.58**</code>. (c) A <strong>discount</strong>: the bond pays 4% on its face while the market demands 6%, so it must be cheaper than face to make up the difference.</p>
+<p><strong>D2.</strong> (a) At 4%: coupon equals yield, so <code>P = **€100.00**</code> (par). At 2%: <code>4 × [1 − (1.02)⁻⁵]/0.02 + 100/(1.02)⁵ = 4 × 4.713460 + 90.573 = 18.854 + 90.573 = **€109.43**</code>. (b) <strong>Coupon &gt; yield → premium; coupon = yield → par; coupon &lt; yield → discount.</strong> Price and yield move in opposite directions, always.</p>
+<p><strong>D3.</strong> <strong>(i) its coupon is above its yield.</strong> Investors pay more than face only to obtain a coupon better than the going rate.</p>
+<p><strong>D4.</strong> (a) <code>P = 100/(1.05)⁸ = 100/1.477455 = **€67.68**</code>. (b) <code>P = 100/(1.06)⁸ = 100/1.593848 = **€62.74**</code>; change <code>= (62.74 − 67.68)/67.68 = **−7.30%**</code>.</p>
+<p><strong>D5.</strong> (a) With <code>P = 91.58</code>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>t</th>
+<th>CF</th>
+<th>PV = CF/(1.06)^t</th>
+<th>weight w = PV/P</th>
+<th>t · w</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>4</td>
+<td>3.77</td>
+<td>0.0412</td>
+<td>0.0412</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>4</td>
+<td>3.56</td>
+<td>0.0389</td>
+<td>0.0777</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>4</td>
+<td>3.36</td>
+<td>0.0367</td>
+<td>0.1100</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>4</td>
+<td>3.17</td>
+<td>0.0346</td>
+<td>0.1384</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>104</td>
+<td>77.71</td>
+<td>0.8486</td>
+<td>4.2432</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><strong>91.58</strong></td>
+<td><strong>1.0000</strong></td>
+<td><strong>4.611</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Macaulay duration = 4.61 years.</strong> It is the average time to being repaid, weighted by present value — which is why it is under five even though the bond runs five years. (b) <code>D_mod = D/(1 + y) = 4.611/1.06 = **4.350**</code>. (c) <code>ΔP/P ≈ −D_mod × Δy = −4.350 × 0.005 = −2.18%</code>, i.e.&nbsp;about <code>−€1.99</code>, giving roughly <strong>€89.59</strong>.</p>
+<p><strong>D6.</strong> (a) <code>ΔP/P ≈ −7.72 × 0.01 = −7.72%</code> → <code>P ≈ 100 × 0.9228 = **€92.28**</code>. (b) The actual price is <strong>€92.64</strong>, so the estimate is <strong>€0.36 too low</strong>. Duration alone <strong>overstates the loss</strong>. It will also understate the gain when yields fall: the straight line lies below the curve on both sides.</p>
+<p><strong>D7.</strong> <strong>(i) &gt; (ii) &gt; (iii).</strong> (i) beats (ii): a zero pays everything at the end, so its weighted average time is the full 10 years, while coupons pull (ii)’s average forward. (ii) beats (iii): same coupon, but money returned over ten years instead of three.</p>
+<p><strong>D8.</strong> (a) <code>ΔP/P ≈ −D_mod Δy + ½ C (Δy)² = −7.72(0.01) + ½(75.0)(0.0001) = −0.0772 + 0.00375 = −0.07345</code> → <code>P ≈ 100 × 0.92655 = **€92.66**</code>. (b) Duration alone gave €92.28, out by 36 cents <em>below</em> the truth. Adding convexity gives €92.66, out by 2 cents <em>above</em> it. The second term recovers almost all of the curvature the straight line missed; the 2 cents that remain belong to the next term again, and no one on a trading floor cares about them.</p>
+<p><strong>D9.</strong> Convexity means the price curve bends away from the straight-line estimate in the holder’s favour: when yields fall the bond gains more than duration predicts, and when they rise it loses less. A risk manager cares because a duration-only report overstates losses and understates gains, and because between two bonds of equal duration the more convex one is worth more when rates move a long way.</p>
+<p><strong>D10.</strong> The <strong>more convex</strong> one. With equal duration the two behave the same for a small move, but for a large move in either direction the convex bond does better: more upside, less downside. That asymmetry is worth paying for, and in the market you usually do.</p>
+<p><strong>D11.</strong> (a) Weights <code>400/1,000 = 0.4</code> and <code>600/1,000 = 0.6</code>. <code>D_portfolio = 0.4(7.72) + 0.6(1.90) = 3.088 + 1.140 = **4.228**</code>. (b) <code>ΔV ≈ −4.228 × 0.01 × €1,000,000 = **−€42,280**</code>. (c) “A one-point rise in yields costs the reserve about €42,000, a little over 4% of it; about three quarters of the exposure sits in the ten-year holding, and shortening that would cut it roughly in half.”</p>
+<p><strong>D12.</strong> (a) <code>PV = 500,000/(1.04)³ = 500,000/1.124864 = **€444,498.18**</code>. (b) Each zero’s duration is its maturity. With a share <code>w</code> in the 1-year zero: <code>1·w + 5(1 − w) = 3 → 5 − 4w = 3 → **w = ½**</code>. Half in each. (c) <code>€222,249.09</code> in each. The 1-year zero pays <code>222,249.09 × 1.04 = **€231,139.05**</code> in year 1. The 5-year zero pays <code>222,249.09 × (1.04)⁵ = **€270,400.00**</code> in year 5.</p>
+<p><strong>D13.</strong> (a) <code>231,139.05 × (1.05)² = 231,139.05 × 1.1025 = **€254,830.80**</code>. (b) <code>270,400.00/(1.05)² = 270,400.00/1.1025 = **€245,260.77**</code>. (c) <code>254,830.80 + 245,260.77 = **€500,091.57**</code>, i.e.&nbsp;<strong>€91.57 more</strong> than the €500,000 owed. At 3%: <code>231,139.05 × 1.0609 = 245,215.42</code> and <code>270,400.00/1.0609 = 254,877.93</code>, total <strong>€500,093.35</strong>, <strong>€93.35 more</strong>. In both directions the reinvestment effect and the price effect cancel, and what is left over is a small <strong>gain</strong>: that is convexity, on the holder’s side again. Without the match — all in the 1-year zero — a fall to 3% would leave <code>444,498.18 × 1.04 × 1.0609 = €490,430.84</code>, about €9,570 short.</p>
+<p><strong>D14.</strong> (a) At par, <code>P = 100</code>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>t</th>
+<th>CF</th>
+<th>PV = CF/(1.05)^t</th>
+<th>weight w = PV/P</th>
+<th>t · w</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>5</td>
+<td>4.76</td>
+<td>0.0476</td>
+<td>0.0476</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>5</td>
+<td>4.54</td>
+<td>0.0454</td>
+<td>0.0907</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>5</td>
+<td>4.32</td>
+<td>0.0432</td>
+<td>0.1296</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>5</td>
+<td>4.11</td>
+<td>0.0411</td>
+<td>0.1645</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>5</td>
+<td>3.92</td>
+<td>0.0392</td>
+<td>0.1959</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>105</td>
+<td>78.35</td>
+<td>0.7835</td>
+<td>4.7012</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><strong>100.00</strong></td>
+<td><strong>1.0000</strong></td>
+<td><strong>5.330</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Macaulay duration = 5.33 years</strong>, under six because the coupons come back earlier. (b) With a share <code>w</code> in the 2-year zero: <code>2w + 5.33(1 − w) = 4 → w = (5.33 − 4)/(5.33 − 2) = 1.33/3.33 = **0.40**</code>. About <strong>40% in the zero (€328,509)</strong> and <strong>60% in the coupon bond (€494,193)</strong>. Less in the short bond than on the slide, because the long bond is now shorter than six years. (c) The payment’s date fell by exactly <strong>1 year</strong> (4 → 3); the 2-year zero’s duration too (2 → 1). The coupon bond’s fell by only <code>5.33 − 4.55 = **0.78**</code>. So even with rates unchanged, durations drift apart as time passes and the match is lost. The treasurer must <strong>re-compute the weights and rebalance</strong>, in practice at least once a year and after any large rate move: immunisation is a routine, not a one-off purchase.</p>
+</details>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/niccolosalvini\.github\.io\/ese-qnb-bachelor\/2026-27\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>ESE Florence · Borgo Santi Apostoli 19, 50123 Firenze · Bachelor, A.Y. 2026–2027</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Niccolò Salvini, PhD · Vincenzo Nardelli, PhD</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
