@@ -1,24 +1,46 @@
-# CLAUDE.md — Research & Quantitative Business Methods (ESE Florence)
+# CLAUDE.md — Quantitative Business Methods, Bachelor (ESE Florence)
 
-Course repository *and* course website of *MBA03 Research & Quantitative Business
-Methods*, ESE MBA, Florence, Term 1 A.Y. 2026–2027. Module leader Arianna Ziliotto.
-Weeks 1–5 Niccolò Salvini, in person, Thursdays 10:00–13:00, 24 Sep → 22 Oct 2026;
-weeks 6–10 Vincenzo Nardelli: week 6 Thu 5 Nov in person in Florence, then weeks 7–10
-online, Mondays 10:00–13:00, 9 → 30 Nov 2026.
+Course repository *and* course website of *Quantitative Business Methods* for the ESE
+**Bachelor**, Florence, from A.Y. 2026–2027 on. It started on 16 November 2026 as a copy of the
+MBA module (`NiccoloSalvini/ese-qnb`, *MBA03 Research & Quantitative Business Methods*), history
+included, so that improvements can be carried across with `git cherry-pick` (the MBA repo is
+the remote `mba`, push disabled on purpose — never push there from here).
 
-Live site: <https://niccolosalvini.github.io/ese-qnb/> · Repo: `NiccoloSalvini/ese-qnb` (public)
+**For now the content is the MBA's, unchanged.** What is still MBA-specific and to be set for the
+Bachelor class: dates (shown as TBA on the home page; the dates inside drills, homework, notes and
+the midterm briefing are still last term's), the module code, the Moodle course id, the assessment
+details (the Bachelor criteria are slightly less strict than the postgraduate ones and will be
+given by Niccolò), and who teaches weeks 6–10. Do not invent any of these: ask.
+
+Live site: <https://niccolosalvini.github.io/ese-qnb-bachelor/> (redirects to the current year,
+<https://niccolosalvini.github.io/ese-qnb-bachelor/2026-27/>) · Repo: `NiccoloSalvini/ese-qnb-bachelor` (public)
 
 How a session is designed and what a session pack contains: the project skill
-`.claude/skills/ese-qnb-method/`. Both halves follow it.
+`.claude/skills/ese-qnb-bachelor-method/`.
 
-Sibling of `~/dev/ese-ai` (same site skeleton, same brand, same deploy). Read that
-repo's `CLAUDE.md` for the Quarto/GitHub Pages gotchas; they all apply here.
+Sibling of `~/dev/ese-qnb` (MBA) and `~/dev/ese-ai` (same site skeleton, same brand). Read
+ese-ai's `CLAUDE.md` for the Quarto/GitHub Pages gotchas; they all apply here.
+
+## One repo, one URL per academic year
+
+The course is meant to run for several years. The repo is one; each year is a folder on the
+`gh-pages` branch, so a new year never overwrites an old one:
+
+- `Makefile` holds `AY ?= 2026-27`; `_quarto.yml` has `site-url: …/ese-qnb-bachelor/2026-27/`.
+- `make deploy` renders and runs `scripts/publish.sh $(AY)`: it replaces only the `$(AY)/`
+  folder on `gh-pages`, leaves the other years alone, and rewrites the root `index.html` as a
+  redirect to the most recent year folder.
+- At the end of a year: `make freeze` tags the source as `aa-2026-27`. To start the next one,
+  bump `AY` in the Makefile and `site-url` (and the "A.Y." strings) — then edit the materials in
+  place. The old year stays online at its own URL, frozen.
+- The Colab links point at `main`, so an archived year opens the current notebooks; if that ever
+  matters, point them at the year's tag when freezing.
 
 ## Confidentiality — read before writing anything
 
 The repo is **public**. ESE official documents (syllabus PDF, midterm guidelines,
 exam and resit papers with model answers) live outside the repo, in each lecturer's
-own folder (Niccolò's: `~/Downloads/ese-qnb-material/`), and are **never** copied here: no exam item, no
+own folder (Niccolò's MBA documents were in `~/Downloads/ese-qnb-material/`; where the Bachelor ones are: ask), and are **never** copied here: no exam item, no
 model answer, no midterm case function. Drills and homework use the same *form*
 with different functions and numbers. `syllabus/` is gitignored as a guard.
 Grading material, feedback and the handover to the colleague stay private.
@@ -28,11 +50,12 @@ Grading material, feedback and the handover to the colleague stay private.
 ```bash
 make preview   # quarto preview
 make build     # quarto render -> _site/
-make deploy    # render locally, then quarto publish gh-pages
+make deploy    # render locally, publish _site/ into the $(AY)/ folder of gh-pages
+make freeze    # end of a year: tag the source (aa-<AY>)
 make clean
 ```
 
-No CI. Rendered here, `_site/` pushed to the `gh-pages` branch.
+No CI. Rendered here, `_site/` pushed into its year folder on the `gh-pages` branch.
 
 ## Layout
 
@@ -85,6 +108,22 @@ Reveal font gotcha (as in ese-ai): `ese.scss` re-sets `--r-main-font` in the rul
 section with quoted names, because Quarto interpolates the SCSS variable unquoted
 and `Source Sans 3` unquoted is invalid CSS.
 
+## The board: drawing on the slides (`_extensions/ese-board/`)
+
+Our own revealjs plugin, enabled for every deck in `lectures/_metadata.yml`
+(`revealjs-plugins: [ese-board]`); it replaces Quarto's `chalkboard`, which must stay off (both
+want the C and B keys). `C` draws on the slide, `B` opens a blank board (one per slide, with
+pages), `P H L E` pen / highlighter / laser / eraser (also right-drag or the pen's eraser end),
+`1–6` colour, `[ ]` size, Shift for a straight line, `⌘Z` undo, `Delete` clear the page,
+`G` board background (plain, squared, dots, ruled, axes, first quadrant, dark), `N` new page,
+`Esc` stop. A small pen and board button sit bottom-left when not drawing.
+
+Ink is SVG in slide coordinates (1280×720), drawn with perfect-freehand (vendored, MIT, licence
+next to it). It is saved per deck in the browser's localStorage, can be downloaded and reloaded
+as JSON (⋯ menu), a board page saves as PNG, and annotations are printed with `?print-pdf`.
+Ink colours switch to a light palette on dark slides (section, LAB, clip) and on the dark board.
+Self-contained: to use it in another Quarto site, copy the folder and add the metadata line.
+
 ## Two traps in the clips, both cost a re-render
 
 `ax.plot(self.method, ...)` fails with `cannot pickle '_thread.lock'`: manim caches the plotted
@@ -121,8 +160,8 @@ formative: nothing is handed in or graded.
 ## Moodle
 
 Site: <https://esestudents.com> (**no `www`** — the other host answers
-`requirecorrectaccess`). Moodle 4.5.10. This course is **id 2546**
-(`MBA003_262701_FL`); the AI course is 2531.
+`requirecorrectaccess`). Moodle 4.5.10. The Bachelor course id is
+**TBC** (the MBA's was 2546, `MBA003_262701_FL`; the AI course is 2531).
 
 Access is through `mcp-moodle-teacher` (own server,
 <https://github.com/NiccoloSalvini/mcp-moodle-teacher>), wired in `.mcp.json`.

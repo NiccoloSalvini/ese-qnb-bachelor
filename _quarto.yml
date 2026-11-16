@@ -27,9 +27,9 @@ execute:
 
 website:
   title: "Quantitative Business Methods"
-  description: "MBA03 Research & Quantitative Business Methods — European School of Economics, Florence. Term 1, A.Y. 2026–2027."
-  site-url: https://niccolosalvini.github.io/ese-qnb/
-  repo-url: https://github.com/NiccoloSalvini/ese-qnb
+  description: "Quantitative Business Methods (Bachelor) — European School of Economics, Florence. A.Y. 2026–2027."
+  site-url: https://niccolosalvini.github.io/ese-qnb-bachelor/2026-27/
+  repo-url: https://github.com/NiccoloSalvini/ese-qnb-bachelor
   favicon: images/favicon.ico
   search:
     location: navbar
@@ -47,10 +47,10 @@ website:
         text: How to work
     right:
       - icon: github
-        href: https://github.com/NiccoloSalvini/ese-qnb
+        href: https://github.com/NiccoloSalvini/ese-qnb-bachelor
         aria-label: GitHub repository
   page-footer:
-    left: "ESE Florence · Borgo Santi Apostoli 19, 50123 Firenze · MBA Term 1, A.Y. 2026–2027"
+    left: "ESE Florence · Borgo Santi Apostoli 19, 50123 Firenze · Bachelor, A.Y. 2026–2027"
     right: "Niccolò Salvini, PhD · Vincenzo Nardelli, PhD"
 
 format:

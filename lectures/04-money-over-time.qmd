@@ -1,8 +1,8 @@
 ---
 title: "Money has a date on it"
-subtitle: "Week 4 · Thursday 15 October 2026 · 10:00–13:00"
+subtitle: "Week 4 · A.Y. 2026–2027"
 author: "Niccolò Salvini, PhD"
-institute: "MBA03 Research & Quantitative Business Methods · European School of Economics, Florence"
+institute: "Quantitative Business Methods · Bachelor · European School of Economics, Florence"
 ---
 
 ## Homework 3, at the board {.paper background-color="#eceff0"}

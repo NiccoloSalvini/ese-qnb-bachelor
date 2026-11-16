@@ -10,7 +10,7 @@ md = lambda s: cells.append(nbf.v4.new_markdown_cell(s.strip()))
 code = lambda s: cells.append(nbf.v4.new_code_cell(s.strip()))
 
 md(r"""
-# MBA03 · Week 2 — The tool that finds the top of any hill
+# Quantitative Business Methods (Bachelor) · Week 2 — The tool that finds the top of any hill
 **European School of Economics · Thu 1 Oct 2026 · Tutor: Niccolò Salvini**
 
 Running case: **Arno Bikes**. `C(q) = 60,000 + 400q`, `p(q) = 1600 − 4q`, so `π(q) = −4q² + 1200q − 60,000`.

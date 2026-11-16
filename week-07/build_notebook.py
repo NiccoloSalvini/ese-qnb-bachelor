@@ -11,7 +11,7 @@ md = lambda s: cells.append(nbf.v4.new_markdown_cell(s.strip()))
 code = lambda s: cells.append(nbf.v4.new_code_cell(s.strip()))
 
 md(r"""
-# MBA03 · Week 7 — Three shapes, and how to decide with them
+# Quantitative Business Methods (Bachelor) · Week 7 — Three shapes, and how to decide with them
 **European School of Economics · Mon 9 Nov 2026 · online · Tutor: Vincenzo Nardelli**
 
 Today each unknown number at **Arno Bikes** first gets a mean and a spread (block A, the part of Thursday we did not reach), then a **shape** — and a shape is something you can read a probability off. Three shapes cover almost every number a firm does not know: a count out of $n$ (binomial), a count at a rate (Poisson), a measurement (the normal). The founder's four questions: how many returns next week; how many of Saturday's riders buy; what range to print on the box; which battery supplier to sign.

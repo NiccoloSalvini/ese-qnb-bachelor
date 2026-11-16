@@ -10,7 +10,7 @@ md = lambda s: cells.append(nbf.v4.new_markdown_cell(s.strip()))
 code = lambda s: cells.append(nbf.v4.new_code_cell(s.strip()))
 
 md(r"""
-# MBA03 · Week 4 — Money has a date on it
+# Quantitative Business Methods (Bachelor) · Week 4 — Money has a date on it
 **European School of Economics · Thu 15 Oct 2026 · Tutor: Niccolò Salvini**
 
 The case: a new assembly line costs **€2.4M today** and returns **€700k, €800k, €900k, €1,000k** over four years. Its money costs Arno Bikes **9% a year** (the WACC, built at the end of block D).

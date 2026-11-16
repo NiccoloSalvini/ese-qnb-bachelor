@@ -1,8 +1,8 @@
 ---
 title: "Three shapes, and how to decide with them"
-subtitle: "Week 7 · Monday 9 November 2026 · 10:00–13:00 · online"
+subtitle: "Week 7 · A.Y. 2026–2027"
 author: "Vincenzo Nardelli, PhD"
-institute: "MBA03 Research & Quantitative Business Methods · European School of Economics, Florence"
+institute: "Quantitative Business Methods · Bachelor · European School of Economics, Florence"
 ---
 
 ## Last Thursday, in one minute

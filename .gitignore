@@ -32,3 +32,6 @@ week-*/quiz.md
 midterm/marking/
 
 **/*.quarto_ipynb
+
+# local preview server
+.claude/launch.json

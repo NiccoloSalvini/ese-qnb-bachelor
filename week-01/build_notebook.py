@@ -11,7 +11,7 @@ md = lambda s: cells.append(nbf.v4.new_markdown_cell(s.strip()))
 code = lambda s: cells.append(nbf.v4.new_code_cell(s.strip()))
 
 md(r"""
-# MBA03 · Week 1 — Revision of mathematics, told as business decisions
+# Quantitative Business Methods (Bachelor) · Week 1 — Revision of mathematics, told as business decisions
 **European School of Economics · Thu 24 Sep 2026 · Tutor: Niccolò Salvini**
 
 Running case: **Arno Bikes**, e-bike assembler in Florence.

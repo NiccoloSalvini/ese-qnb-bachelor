@@ -1,8 +1,8 @@
 ---
 title: "The founder does not know the numbers"
-subtitle: "Week 6 · Thursday 5 November 2026 · 10:00–13:00 · in person"
+subtitle: "Week 6 · A.Y. 2026–2027"
 author: "Vincenzo Nardelli, PhD"
-institute: "MBA03 Research & Quantitative Business Methods · European School of Economics, Florence"
+institute: "Quantitative Business Methods · Bachelor · European School of Economics, Florence"
 ---
 
 ## Who I am

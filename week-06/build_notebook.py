@@ -11,7 +11,7 @@ md = lambda s: cells.append(nbf.v4.new_markdown_cell(s.strip()))
 code = lambda s: cells.append(nbf.v4.new_code_cell(s.strip()))
 
 md(r"""
-# MBA03 · Week 6 — The founder does not know the numbers
+# Quantitative Business Methods (Bachelor) · Week 6 — The founder does not know the numbers
 **European School of Economics · Thu 5 Nov 2026 · in person · Tutor: Vincenzo Nardelli**
 
 In weeks 1–5 every number at **Arno Bikes** was given: a fixed cost, a list price, a coupon. This quarter the founder asks questions she cannot answer with a given number — how many customers do both, which supplier sent the faulty battery. Each answer comes with a spread. (Her third question, how many returns next week, opens week 7.)

@@ -1,8 +1,8 @@
 ---
 title: "Studying a function, and optimising it"
-subtitle: "Week 3 · Thursday 8 October 2026 · 10:00–13:00"
+subtitle: "Week 3 · A.Y. 2026–2027"
 author: "Niccolò Salvini, PhD"
-institute: "MBA03 Research & Quantitative Business Methods · European School of Economics, Florence"
+institute: "Quantitative Business Methods · Bachelor · European School of Economics, Florence"
 ---
 
 ## Homework 2, at the board {.paper background-color="#eceff0"}

@@ -11,7 +11,7 @@ md = lambda s: cells.append(nbf.v4.new_markdown_cell(s.strip()))
 code = lambda s: cells.append(nbf.v4.new_code_cell(s.strip()))
 
 md(r"""
-# MBA03 · Week 3 — Studying a function, and optimising it
+# Quantitative Business Methods (Bachelor) · Week 3 — Studying a function, and optimising it
 **European School of Economics · Thu 8 Oct 2026 · Tutor: Niccolò Salvini**
 
 Today is the mathematical content of the midterm: the seven-step study and optimisation.

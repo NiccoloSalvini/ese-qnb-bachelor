@@ -1,8 +1,8 @@
 ---
 title: "Revision of mathematics, told as business decisions"
-subtitle: "Week 1 · Thursday 24 September 2026 · 10:00–13:00"
+subtitle: "Week 1 · A.Y. 2026–2027"
 author: "Niccolò Salvini, PhD"
-institute: "MBA03 Research & Quantitative Business Methods · European School of Economics, Florence"
+institute: "Quantitative Business Methods · Bachelor · European School of Economics, Florence"
 ---
 
 ## Who I am

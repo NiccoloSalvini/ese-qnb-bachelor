@@ -1,6 +1,6 @@
 ---
-name: ese-qnb-method
-description: "How sessions of MBA03 Research & Quantitative Business Methods (ESE Florence, T1 AY26/27) are designed and built in this repo, for both halves: weeks 1–5 (Niccolò Salvini) and weeks 6–10 (Vincenzo Nardelli). Use it for any request to prepare a session or a piece of one: the revealjs deck, notes, drills, homework, Colab notebook, manim clip, SVG figures, a mock or revision set, the week's row on the site, or publishing it. Use it even when the request only says \"week 7\", \"Thursday's slides\", \"a drill on the binomial\", \"check these numbers\" or \"put it online\"."
+name: ese-qnb-bachelor-method
+description: "How sessions of Quantitative Business Methods for the ESE Bachelor (Florence, from A.Y. 2026–27, one site folder per year) are designed and built in this repo — a copy of the MBA module adapted for undergraduates. Use it for any request to prepare a session or a piece of one: the revealjs deck, notes, drills, homework, Colab notebook, manim clip, SVG figures, a mock or revision set, the week's row on the site, or publishing it. Use it even when the request only says \"week 7\", \"Thursday's slides\", \"a drill on the binomial\", \"check these numbers\" or \"put it online\"."
 ---
 
 # How this course is taught and built
@@ -9,17 +9,17 @@ description: "How sessions of MBA03 Research & Quantitative Business Methods (ES
 
 ## The course, in brief
 
-- ESE MBA, Florence. Term 1, A.Y. 2026–2027, 30 contact hours. Module leader **Arianna Ziliotto**: she owns the syllabus and wrote the assessments.
-- Weeks 1–5: **Niccolò Salvini**, in person, Thursdays 10:00–13:00 (24 Sep → 22 Oct). Algebra revision, calculus, financial mathematics. He marks the midterm.
-- Weeks 6–10: **Vincenzo Nardelli**, online, Thursdays 10:00–13:00, from 5 November to mid-December. Probability and distributions, then econometrics and time series. The topics per week are in the schedule table in `index.qmd`.
-- Students: a small group of MBA students in Florence, in the room for weeks 1–5 and online for weeks 6–10. Their quantitative background is mixed and largely unknown. They do not write code. A formula-first approach was disliked the year before.
-- Assessment (public, in `index.qmd`): midterm 25% (a research paper on a business case built on a cost, a revenue and a profit function, plus an oral in week 6); final exam 75% (three hours, five equal questions, all work shown, non-programmable calculator, no notes). One question of the final is pure calculus (weeks 2–3); the others come from the second half. The resit covers the whole module. In-class quizzes fall in weeks 3, 7 and 10.
+- ESE **Bachelor**, Florence, from A.Y. 2026–2027, 30 contact hours. The course is taught year after year: each year is a folder of the site (`…/ese-qnb-bachelor/2026-27/`), set by `AY` in the `Makefile` (see `CLAUDE.md`).
+- The repo began on 16 Nov 2026 as a copy of the MBA module *MBA03 Research & Quantitative Business Methods* (`~/dev/ese-qnb`, remote `mba`). **For now the materials are the MBA's, unchanged**: weeks 1–5 algebra revision, calculus, financial mathematics (Niccolò Salvini); weeks 6–10 probability, inference, regression (written by Vincenzo Nardelli for the MBA). The topics per week are in the schedule table in `index.qmd`.
+- **Still to be confirmed for the Bachelor class — ask, never invent:** session dates and times (TBA on the home page; the dates inside drills, homework, notes and the briefing are last term's), module code and leader, who teaches weeks 6–10, the Moodle course id, and the assessment. Niccolò will give the Bachelor marking criteria: slightly less strict than the MBA's postgraduate ones (the MBA had no late submission and a 50% cap on resubmission; do not assume either holds here).
+- Students: undergraduates, presumably younger and with a mixed quantitative background; they do not write code. Write for them: same rigour, more steps shown, shorter sentences, a worked example before every exercise of a new kind. Until the class is known, keep the MBA materials as they are.
+- Assessment, as published for the MBA (in `index.qmd`, marked "to be confirmed"): midterm 25% (a research paper on a business case built on a cost, a revenue and a profit function, plus an oral); final exam 75% (three hours, five equal questions, all work shown, non-programmable calculator, no notes; one question is pure calculus). Treat this as a placeholder until the Bachelor documents arrive.
 
 What is fixed is the content: the syllabus and the exam papers. What is free is the delivery. This skill is about the delivery.
 
 ## Confidentiality: the repo is public
 
-The ESE documents (syllabus PDF, midterm guidelines, final and resit papers with model answers) live **outside** the repo, in each lecturer's own folder. Niccolò's is `~/Downloads/ese-qnb-material/`. If you do not know where the current lecturer keeps theirs, ask; do not guess.
+The ESE documents (syllabus PDF, midterm guidelines, final and resit papers with model answers) live **outside** the repo, in the lecturer's own folder. The Bachelor ones have not been located yet: ask Niccolò where they are; do not guess, and do not use the MBA papers as if they were the Bachelor's.
 
 - Read those documents before writing anything that touches assessment, so that each drill rehearses the right *form* of exam item. If they are not at hand yet, do not stop: work from the forms already public in the repo (`index.qmd`, the existing drills and mocks), mark every mapping to an exam item **TBC** in `notes.md`, and ask.
 - Never copy into the repo an exam item, a model answer, the midterm case and its functions, or the lecturer's marking grid. Name an exam item by its form, as the repo already does ("the final's calculus question", "the resit's multiple-choice block"), and say no more about what it asks than `index.qmd` says. Drills, homework and mocks use the same form with **different functions and numbers**. If a sentence would let a student reconstruct the paper, it does not ship.
@@ -39,6 +39,7 @@ These choices came from what did not work the year before, and they are why the 
 - **Mixed backgrounds** are handled with two tracks of drills: a core set everyone does and a stretch set for whoever is ahead. Never slow the course down to the weakest item; add office-hour material instead.
 - **Firms, not abstract functions.** The running case is **Arno Bikes**, an e-bike assembler in Florence (fixed cost €60,000/month, variable cost €400/bike, demand p = 1600 − 4q). Its shared functions are in `anim/src/common.py`. Reuse it wherever it fits, including in the second half (defect rates, demand uncertainty, sales against advertising), so that the students always meet a familiar firm. When the second half needs a new shared value (a demand spread, a defect rate), add it to `common.py` with a comment, so that both halves use the same firm.
 - **Homework is on paper and formative.** Nothing is handed in or graded: it is corrected together at the start of the next session. A homework with no session after it goes by email. The only deliverables are the assessments, on Turnitin.
+- **The board.** Every deck has the drawing board (`_extensions/ese-board/`, keys in `CLAUDE.md`): `C` writes over a slide, `B` opens a blank board with squared paper, axes or the first quadrant for sketching a function. Leave space on a slide where the lecturer will write (a PAPER slide, a half-empty picture slide) rather than filling it with text.
 
 ## The session pack for week N
 
@@ -51,7 +52,7 @@ These are the files of a full session. Write the ones that were asked for, and l
 5. **`week-NN/session.ipynb`**, generated by `week-NN/build_notebook.py` (nbformat): the projector demos with plotly sliders first, then "Drills, solved in code", one cell per drill part with an `assert` on the answer published in `drills.md`. Execute it with nbconvert before delivering. It is optional for students and not examined.
 6. **`week-NN/drills.md`**: ten to eighteen items, core and stretch, in exam wording, labelled D1, D2… by block. Calculus and financial mathematics: "Evaluate…", "Determine…", "Study the function…", "Select the correct alternative and justify in one line…". Probability and statistics: "Find the probability that…", "Determine the expected value and the standard deviation…", "State H₀ and H₁ and test at the 5% level…", "Construct a 95% confidence interval for…". Worked solutions go in a `<details>` block, written the way an examiner wants to see them: method first, number second.
 7. **`week-NN/homework.md`**: five to eight drill items (two to three hours), one "memo to the Board" of 150–250 words applying the week's technique to a stated firm, a self-check list, and a line on what it prepares for.
-8. **The site**: add any new rendered file to the explicit list in `_quarto.yml`, replace the `—` cells in the week's row of `index.qmd`, run `make build`, look at the pages, then `make deploy`.
+8. **The site**: add any new rendered file to the explicit list in `_quarto.yml`, replace the `—` cells (and the TBA date) in the week's row of `index.qmd`, run `make build`, look at the pages, then `make deploy` — it publishes into the current year's folder only.
 
 ## Every number is checked before it ships
 
@@ -63,14 +64,14 @@ Round only at the end, and say in the solution how many decimals the answer is g
 
 Session → by the next day, deck, drill solutions and homework on the site (`make deploy`) → next session, the first 15–20 minutes go through the homework at the board.
 
-Moodle (course id 2546) mirrors the site with links. Materials cannot be uploaded through the API, and the setup for the `mcp-moodle-teacher` server is in `CLAUDE.md`. Each lecturer uses their own token in their own `.env`. Announcements and grades are visible to students the moment they are written, so show the text to the lecturer and get a yes first.
+Moodle (Bachelor course id: TBC; the MBA's was 2546) mirrors the site with links. Materials cannot be uploaded through the API, and the setup for the `mcp-moodle-teacher` server is in `CLAUDE.md`. Each lecturer uses their own token in their own `.env`. Announcements and grades are visible to students the moment they are written, so show the text to the lecturer and get a yes first.
 
 ## Who owns what
 
-Niccolò owns weeks 1–5, the midterm briefing, and the midterm marking and its feedback. Vincenzo owns weeks 6–10 and the final exam's questions on them. Shared files (`index.qmd`, `setup.qmd`, `_quarto.yml`, `README.md`, `CLAUDE.md`, the theme) belong to both: change only what the current task needs. Do not edit the other half's weeks without asking.
+Niccolò owns this repo. Weeks 6–10 were written by Vincenzo Nardelli for the MBA; until it is settled who teaches them to the Bachelor class, change them only when Niccolò asks. Improvements that suit both courses can be cherry-picked from or to the MBA repo (`mba` remote, never pushed to from here).
 
 ## Style
 
-- Materials are in English: plain, technically precise, the register of an MBA without buzzwords, never talking down. Talk to the lecturer in their own language.
+- Materials are in English: plain, technically precise, the register of a good undergraduate textbook without buzzwords, never talking down. Talk to the lecturer in their own language.
 - In the script, the lecturer asks a question with a bet inside, shows the picture, then gives the technique. The explanation follows the students' attempt.
 - Commit messages are one plain sentence on what changed and why, as in `git log`. Commit only what the task produced.

@@ -1,8 +1,8 @@
 ---
 title: "How sure are we of that number?"
-subtitle: "Week 8 · Monday 16 November 2026 · 10:00–13:00 · online"
+subtitle: "Week 8 · A.Y. 2026–2027"
 author: "Vincenzo Nardelli, PhD"
-institute: "MBA03 Research & Quantitative Business Methods · European School of Economics, Florence"
+institute: "Quantitative Business Methods · Bachelor · European School of Economics, Florence"
 ---
 
 ## Last Monday, in one minute

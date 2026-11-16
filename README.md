@@ -1,10 +1,22 @@
-# MBA03 Research & Quantitative Business Methods — weeks 1–5
+# Quantitative Business Methods — Bachelor
 
-European School of Economics, Florence · Term 1 AY 2026/27 · Weeks 1–5: Niccolò Salvini · weeks 6–10: Vincenzo Nardelli · Module leader: Arianna Ziliotto
+European School of Economics, Florence · Bachelor · A.Y. 2026/27 onwards · Niccolò Salvini
 
-Course site: <https://niccolosalvini.github.io/ese-qnb/>, built from this repository with Quarto.
+Course site: <https://niccolosalvini.github.io/ese-qnb-bachelor/>, one folder per academic year
+(<https://niccolosalvini.github.io/ese-qnb-bachelor/2026-27/>), built from this repository with Quarto.
 
-Five Thursday sessions (24 Sep → 22 Oct 2026) covering the revision of algebra, calculus and financial mathematics that the midterm report and the final exam are built on. Each session is half slides, half laboratory: the deck sets the question and the technique, the Colab notebook shows it move, paper drills make it stick. One running case throughout: Arno Bikes, an e-bike assembler in Florence.
+Started as a copy of the MBA module [`ese-qnb`](https://github.com/NiccoloSalvini/ese-qnb) (MBA03
+Research & Quantitative Business Methods), history included; the materials are the MBA's for now and
+will be adapted to the Bachelor class week by week. Dates, assessment details and the module code are
+still to be confirmed.
+
+Ten sessions covering the revision of algebra, calculus and financial mathematics, then probability and
+statistics. Each session is half slides, half laboratory: the deck sets the question and the technique,
+the Colab notebook shows it move, paper drills make it stick. One running case throughout: Arno Bikes,
+an e-bike assembler in Florence.
+
+The decks carry their own drawing board (`_extensions/ese-board/`): press `C` to write over a slide,
+`B` for a blank board with squared paper, axes or a dark board.
 
 ## Layout
 
@@ -38,7 +50,9 @@ lectures/
 anim/
   src/weekNN_scenes.py  manim scenes for the week's clips; common.py holds the palette and the Arno Bikes functions
   render.sh             renders the clips into out/ and a poster frame of each into frames/
-Makefile                preview, build, deploy
+Makefile                preview, build, deploy (into the year's folder), freeze
+scripts/publish.sh      publishes _site/ into <AY>/ on gh-pages, root redirects to the latest year
+_extensions/ese-board/  the drawing board for the decks (revealjs plugin)
 ```
 
 ## Weekly cycle
@@ -47,7 +61,7 @@ Thursday 10:00–13:00 lesson → by Friday: deck, drill solutions and homework 
 
 ## Building
 
-- Site: `make preview` while editing; `make build` renders to `_site/`; `make deploy` renders locally and publishes `_site/` to the `gh-pages` branch. There is no CI. Execution is off, so notebooks are shown with the outputs they were saved with.
+- Site: `make preview` while editing; `make build` renders to `_site/`; `make deploy` renders locally and publishes `_site/` into the `2026-27/` folder of the `gh-pages` branch (set by `AY` in the Makefile). There is no CI. Execution is off, so notebooks are shown with the outputs they were saved with.
 - Notebooks: `python3 week-NN/build_notebook.py` (needs `nbformat`), then `jupyter nbconvert --to notebook --execute --inplace week-NN/session.ipynb`. The final cells re-check every drill's published answer.
 - Clips: `bash anim/render.sh [weekNN]` (manim and ffmpeg; set `MANIM=` to point at your manim) renders at 720p30. Copy the mp4 and the frame into `lectures/media/`, the frame as `<clip>_poster.png`.
 - Figures: `python3 lectures/figs.py`, and each `figs_wNN_*.py`, writes its SVGs into `lectures/img/`.

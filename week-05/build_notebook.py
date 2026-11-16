@@ -10,7 +10,7 @@ md = lambda s: cells.append(nbf.v4.new_markdown_cell(s.strip()))
 code = lambda s: cells.append(nbf.v4.new_code_cell(s.strip()))
 
 md(r"""
-# MBA03 · Week 5 — What a rate rise costs you
+# Quantitative Business Methods (Bachelor) · Week 5 — What a rate rise costs you
 **European School of Economics · Thu 22 Oct 2026 · Tutor: Niccolò Salvini**
 
 Arno Bikes keeps **€1M in bonds**. The Board asks whether a one-point rise in rates should worry it. Two numbers answer that: duration and convexity.

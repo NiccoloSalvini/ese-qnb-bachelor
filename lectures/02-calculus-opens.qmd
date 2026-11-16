@@ -1,8 +1,8 @@
 ---
 title: "The tool that finds the top of any hill"
-subtitle: "Week 2 · Thursday 1 October 2026 · 10:00–13:00"
+subtitle: "Week 2 · A.Y. 2026–2027"
 author: "Niccolò Salvini, PhD"
-institute: "MBA03 Research & Quantitative Business Methods · European School of Economics, Florence"
+institute: "Quantitative Business Methods · Bachelor · European School of Economics, Florence"
 ---
 
 ## Homework 1, at the board {.paper background-color="#eceff0"}
